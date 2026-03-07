@@ -72,12 +72,12 @@ export default function App() {
 
         <Footer />
 
-        {spotOpen && (
+        {/* {spotOpen && (
           <SpotlightModal
             actions={[...navActions, ...DEMO_ACTIONS]}
             onClose={() => setSpotOpen(false)}
           />
-        )}
+        )} */}
       </div>
     </TooltipProvider>
   );
