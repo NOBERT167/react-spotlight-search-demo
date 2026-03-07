@@ -43,7 +43,7 @@ const SpotlightWrapper = ({ children }) => {
       }, [toggleTheme]);
 
   return (
-    <SpotlightProvider actions={actions} theme={spotlightTheme}>
+    <SpotlightProvider actions={actions} theme={spotlightTheme} limit={20}>
       {children}
     </SpotlightProvider>
   );

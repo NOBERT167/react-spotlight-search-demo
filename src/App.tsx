@@ -27,12 +27,19 @@ export default function App() {
   return (
     <TooltipProvider>
       <div className="min-h-screen bg-background text-foreground font-sans">
+        {/* animated background  */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-1/2 -right-1/2 w-full h-full rounded-full blur-3xl opacity-20 bg-[#00d4ff]/30 animate-pulse"></div>
+          <div
+            className="absolute -bottom-1/2 -left-1/2 w-full h-full rounded-full blur-3xl opacity-20 bg-[#7c3aed]/30 animate-pulse"
+            style={{ animationDelay: "1s" }}
+          ></div>
+        </div>
         <Navbar
           activeSection={activeSection}
           onSectionClick={scrollTo}
           onSearchClick={open}
         />
-
         <div className="max-w-[1100px] mx-auto px-6">
           <HeroSection
             onGetStarted={() => scrollTo("Quick Start")}
@@ -45,7 +52,6 @@ export default function App() {
           <ThemingSection />
           <ExamplesSection />
         </div>
-
         <Footer />
       </div>
     </TooltipProvider>
