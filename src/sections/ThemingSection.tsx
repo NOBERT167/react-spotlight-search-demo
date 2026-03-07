@@ -24,12 +24,23 @@ const THEME_OPTIONS = [
 ] as const;
 
 const THEMING_CODE = `// Inside ThemeProvider so useTheme() has access to context
+import {actions} from "@/data/spotlight-actions"; // your actions file
+
 const SpotlightWrapper = ({ children }) => {
-  const { theme } = useTheme(); // shadcn useTheme
+  const { theme, toggleTheme } = useTheme(); // shadcn useTheme
 
   const spotlightTheme =
     theme === "dark" ? "dark" :
     theme === "light" ? "light" : "auto"; // "system" → auto
+
+    // Map your actions and inject toggleTheme into the theme action if you want a shortcut for it. 
+    // This is optional, you can toggle theme however you like.
+    const actions = useMemo(() => {
+        const themed = actions.map((a) =>
+          a.id === "theme" ? { ...a, onSelect: toggleTheme } : a,
+        );
+        return [...themed, ...navActions];
+      }, [toggleTheme]);
 
   return (
     <SpotlightProvider actions={actions} theme={spotlightTheme}>
