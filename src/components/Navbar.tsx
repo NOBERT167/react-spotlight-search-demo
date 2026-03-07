@@ -89,7 +89,7 @@ export function Navbar({
           </Button>
 
           <a
-            href="https://github.com"
+            href="https://github.com/NOBERT167/react-spotlight-search"
             target="_blank"
             rel="noreferrer"
             className="flex items-center p-2 rounded-lg text-muted-foreground hover:text-foreground transition-colors"

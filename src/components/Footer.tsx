@@ -32,26 +32,31 @@ export function Footer() {
           ))}
         </div>
       </div>
-      <div className="text-center mt-10">
-        <span className="text-xs text-muted-foreground">
+      <div className="text-center mt-10 flex gap-2 items-center justify-center">
+        <span className="text-sm text-muted-foreground">
           Made with ❤️ by{" "}
           <a
             href="https://nobertdev.vercel.app/"
             className="hover:text-foreground transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Nobert Langat
           </a>
         </span>
-      </div>
-      <div className="text-center">
-        <span className="text-xs text-muted-foreground">
+        <span className="text-sm text-muted-foreground">
           <a
             href="https://github.com/NOBERT167"
             className="hover:text-foreground transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Github className="inline-block w-4 h-4 mr-1" />
           </a>
         </span>
+      </div>
+      <div className="text-center text-muted-foreground text-xs mt-2">
+        &copy; {new Date().getFullYear()} All rights reserved.
       </div>
     </footer>
   );
