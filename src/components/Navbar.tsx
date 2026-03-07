@@ -21,7 +21,7 @@ export function Navbar({
 
   return (
     <nav className="sticky top-0 z-[100] border-b border-border bg-background/85 backdrop-blur-xl">
-      <div className="max-w-[1100px] mx-auto px-6 h-[60px] flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-6 h-[60px] flex items-center justify-between gap-4">
         {/* Logo */}
         <div className="flex items-center gap-2.5 flex-shrink-0">
           <div className="w-7 h-7 rounded-lg flex items-center justify-center bg-gradient-to-br from-[#00d4ff] to-[#7c3aed]">
