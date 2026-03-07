@@ -1,4 +1,6 @@
 import Icon from "@/components/icons";
+import { Links } from "@/data/content";
+import { Github } from "lucide-react";
 
 export function Footer() {
   return (
@@ -17,16 +19,39 @@ export function Footer() {
         </div>
 
         <div className="flex gap-6">
-          {["npm", "GitHub", "Issues"].map((l) => (
+          {Links.map((link) => (
             <a
-              key={l}
-              href="#"
+              key={link.href}
+              href={link.href}
               className="text-[13px] text-muted-foreground hover:text-foreground transition-colors no-underline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              {l}
+              {link.label}
             </a>
           ))}
         </div>
+      </div>
+      <div className="text-center mt-10">
+        <span className="text-xs text-muted-foreground">
+          Made with ❤️ by{" "}
+          <a
+            href="https://nobertdev.vercel.app/"
+            className="hover:text-foreground transition-colors"
+          >
+            Nobert Langat
+          </a>
+        </span>
+      </div>
+      <div className="text-center">
+        <span className="text-xs text-muted-foreground">
+          <a
+            href="https://github.com/NOBERT167"
+            className="hover:text-foreground transition-colors"
+          >
+            <Github className="inline-block w-4 h-4 mr-1" />
+          </a>
+        </span>
       </div>
     </footer>
   );

@@ -188,3 +188,18 @@ export const KEYBOARD_SHORTCUTS = [
   ["Enter", "Select highlighted action"],
   ["Escape", "Close spotlight"],
 ] as const;
+
+export const Links = [
+  {
+    label: "GitHub",
+    href: "https://github.com/NOBERT167/react-spotlight-search",
+  },
+  {
+    label: "npm",
+    href: "https://www.npmjs.com/package/@nobertdev/react-spotlight-search",
+  },
+  {
+    label: "Documentation",
+    href: "https://github.com/NOBERT167/react-spotlight-search#readme",
+  },
+];
