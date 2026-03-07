@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { DotGrid } from "@/components/DotGrid";
 import { CopyInline } from "@/components/CopyInline";
 import Icon from "@/components/icons";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 interface HeroSectionProps {
   onGetStarted: () => void;
@@ -59,18 +60,26 @@ export function HeroSection({
           >
             Get Started <Icon.ChevronRight className="w-4 h-4 ml-1" />
           </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            onClick={onOpenSpotlight}
-            className="text-sm font-semibold border-border"
-          >
-            <Icon.Search className="w-4 h-4 mr-2" />
-            Live Demo
-            <kbd className="ml-2 text-[11px] px-1.5 py-px rounded bg-muted/50 border border-border font-mono">
-              ⌘K
-            </kbd>
-          </Button>
+          <div className="relative rounded-md">
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={onOpenSpotlight}
+              className="text-sm font-semibold border-border"
+            >
+              <Icon.Search className="w-4 h-4 mr-2" />
+              Live Demo
+              <kbd className="ml-2 text-[11px] px-1.5 py-px rounded bg-muted/50 border border-border font-mono">
+                ⌘K
+              </kbd>
+            </Button>
+            <BorderBeam
+              duration={4}
+              size={60}
+              //   colorFrom="#00d4ff"
+              //   colorTo="#7c3aed"
+            />
+          </div>
         </div>
 
         {/* Install pill */}
