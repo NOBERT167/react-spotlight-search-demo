@@ -30,9 +30,9 @@ export function HeroSection({
 
       <div className="relative">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-8 border border-[#00d4ff]/20 bg-[#00d4ff]/6">
-          <Icon.Star className="w-3 h-3 text-[#00d4ff]" />
-          <span className="text-xs text-[#00d4ff] font-mono font-semibold tracking-[.04em]">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-8 border border-cyan-300 dark:border-[#00d4ff]/20 bg-cyan-50 dark:bg-[#00d4ff]/6">
+          <Icon.Star className="w-3 h-3 text-cyan-600 dark:text-[#00d4ff]" />
+          <span className="text-xs text-cyan-700 dark:text-[#00d4ff] font-mono font-semibold tracking-[.04em]">
             ZERO DEPENDENCIES · ~4KB GZIPPED
           </span>
         </div>
@@ -77,7 +77,7 @@ export function HeroSection({
         <div className="inline-flex items-center gap-3 px-5 py-3 rounded-xl border border-border bg-[#080d14] dark:bg-[#080d14] font-mono text-sm">
           <span className="text-muted-foreground">$</span>
           <span className="text-[#00d4ff]">npm install</span>
-          <span className="text-foreground">
+          <span className="text-gray-200">
             @nobertdev/react-spotlight-search
           </span>
           <CopyInline text="npm install @nobertdev/react-spotlight-search" />

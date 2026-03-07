@@ -35,10 +35,10 @@ export function ApiSection() {
             className={[
               "flex items-center gap-4 px-5 py-3.5",
               i < KEYBOARD_SHORTCUTS.length - 1 ? "border-b border-border" : "",
-              i % 2 !== 0 ? "bg-white/[0.01]" : "",
+              i % 2 !== 0 ? "bg-muted/30" : "",
             ].join(" ")}
           >
-            <kbd className="font-mono text-xs px-2.5 py-1 rounded-md bg-[#00d4ff]/10 border border-[#00d4ff]/20 text-[#00d4ff] flex-shrink-0">
+            <kbd className="font-mono text-xs px-2.5 py-1 rounded-md bg-cyan-50 border border-cyan-200 text-cyan-700 dark:bg-[#00d4ff]/10 dark:border-[#00d4ff]/20 dark:text-[#00d4ff] flex-shrink-0">
               {key}
             </kbd>
             <span className="text-sm text-muted-foreground">{desc}</span>

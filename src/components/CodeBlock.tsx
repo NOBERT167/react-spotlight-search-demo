@@ -76,9 +76,9 @@ export function CodeBlock({ code, lang = "tsx", title }: CodeBlockProps) {
   };
 
   return (
-    <div className="rounded-xl overflow-hidden border border-white/[0.07] bg-[#080d14]">
+    <div className="rounded-xl overflow-hidden border border-slate-700/50 dark:border-white/[0.07] bg-[#080d14]">
       {/* Header */}
-      <div className="flex items-center justify-between px-4 py-2.5 border-b border-white/5 bg-[#0a1020]">
+      <div className="flex items-center justify-between px-4 py-2.5 border-b border-slate-700/40 dark:border-white/5 bg-[#0a1020]">
         <div className="flex items-center gap-2">
           <div className="flex gap-[5px]">
             {["#ff5f57", "#febc2e", "#28c840"].map((c) => (
@@ -117,7 +117,7 @@ export function CodeBlock({ code, lang = "tsx", title }: CodeBlockProps) {
       </div>
       {/* Code */}
       <div className="py-5 overflow-x-auto">
-        <pre className="m-0 font-mono text-[13px] leading-7">
+        <pre className="m-0 font-mono text-[13px] leading-7 text-slate-300">
           {code.split("\n").map((line, i) => (
             <div key={i} className="flex pl-4 pr-6">
               <span className="text-slate-700 min-w-[28px] select-none pr-4 text-right flex-shrink-0">

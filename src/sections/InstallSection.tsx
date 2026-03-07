@@ -26,7 +26,7 @@ export function InstallSection() {
           >
             <span className="text-[#7c3aed] min-w-[40px] font-bold">{pm}</span>
             <span className="text-muted-foreground">$</span>
-            <span className="flex-1">{cmd}</span>
+            <span className="flex-1 text-gray-200">{cmd}</span>
             <CopyInline text={cmd} />
           </div>
         ))}
