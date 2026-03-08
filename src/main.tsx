@@ -4,12 +4,14 @@ import "./index.css";
 import App from "./App.tsx";
 import { ThemeProvider } from "./context/ThemeContext.tsx";
 import SpotlightWrapper from "./providers/SpotlightWrapper.tsx";
+import { Analytics } from "@vercel/analytics/next";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider>
       <SpotlightWrapper>
         <App />
+        <Analytics />
       </SpotlightWrapper>
     </ThemeProvider>
   </StrictMode>,
