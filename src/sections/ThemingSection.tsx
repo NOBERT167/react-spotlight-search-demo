@@ -33,15 +33,6 @@ const SpotlightWrapper = ({ children }) => {
     theme === "dark" ? "dark" :
     theme === "light" ? "light" : "auto"; // "system" → auto
 
-    // Map your actions and inject toggleTheme into the theme action if you want a shortcut for it. 
-    // This is optional, you can toggle theme however you like.
-    const actions = useMemo(() => {
-        const themed = actions.map((a) =>
-          a.id === "theme" ? { ...a, onSelect: toggleTheme } : a,
-        );
-        return [...themed, ...navActions];
-      }, [toggleTheme]);
-
   return (
     <SpotlightProvider actions={actions} theme={spotlightTheme} limit={20}>
       {children}

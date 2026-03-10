@@ -16,6 +16,12 @@ export type SectionId = (typeof SECTIONS)[number];
 
 export const PROVIDER_CODE = `import { SpotlightProvider } from '@nobertdev/react-spotlight-search';
 
+// Define your actions with onSelect handlers that perform the desired behavior (e.g. navigate, toggle theme, etc.) they can be static or computed dynamically from props, state, or context.
+// Always use client-side navigation (e.g. React Router's useNavigate) in your onSelect handlers. Never use window.location.href — it causes a full page reload and drops app state.
+// Optional: group and keywords improve organization and searchability but are not required.
+// actions with a shortcut prop will be registered as global keybindings (e.g. ⌘S) in addition to showing the shortcut badge in the UI.
+//actions can be updated at any time (e.g. in response to API calls or store changes) by calling setActions from useSpotlightContext.
+// you can define actions outside the provider and pass them in, or compute them inside the provider component. Both patterns work great.
 const actions = [
   {
     id: 'home',
@@ -24,6 +30,16 @@ const actions = [
     group: 'Navigation',
     keywords: ['main', 'start'],
     onSelect: () => navigate('/'),
+  },
+  {
+    id: "dark-mode-toggle",
+    label: "Toggle Dark Mode",
+    description: "Switch between light and dark themes",
+    icon: <Moon />,
+    group: "Quick Actions",
+    keywords: ["dark", "mode", "theme"],
+    shortcut: "⌘D",
+    onSelect: () => document.documentElement.classList.toggle("dark"),
   },
 ];
 
