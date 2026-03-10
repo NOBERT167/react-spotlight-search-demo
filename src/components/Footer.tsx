@@ -1,6 +1,7 @@
 import Icon from "@/components/icons";
 import { Links } from "@/data/content";
 import { Github } from "lucide-react";
+import buymecoffeeImg from "@/assets/bmc-button.png";
 
 export function Footer() {
   return (
@@ -54,7 +55,7 @@ export function Footer() {
             <Github className="inline-block w-4 h-4" />
           </a>
         </span>
-        <a
+        {/* <a
           href="https://buymeacoffee.com/nobertdev"
           target="_blank"
           rel="noopener noreferrer"
@@ -62,7 +63,12 @@ export function Footer() {
         >
           <Icon.Coffee className="w-3 h-3" />
           Buy Me a Coffee
-        </a>
+        </a> */}
+        <img
+          src={buymecoffeeImg}
+          alt="Buy Me a Coffee"
+          className="w-auto h-8 cursor-pointer object-contain group-hover:scale-105 transition-transform duration-300"
+        />
       </div>
       <div className="text-center text-muted-foreground text-xs mt-2">
         &copy; {new Date().getFullYear()} All rights reserved.
