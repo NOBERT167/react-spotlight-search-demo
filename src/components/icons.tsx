@@ -249,6 +249,52 @@ const Icon: Record<string, FC<SVGProps<SVGSVGElement>>> = {
       <polygon points="3 11 22 2 13 21 11 13 3 11" />
     </svg>
   ),
+  Coffee: (p) => (
+    <svg
+      {...p}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M10 2v2" />
+      <path d="M14 2v2" />
+      <path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1" />
+      <path d="M6 2v2" />
+    </svg>
+  ),
+  Share: (p) => (
+    <svg
+      {...p}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="18" cy="5" r="3" />
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="19" r="3" />
+      <path d="m8.59 13.51 6.83 3.98" />
+      <path d="m15.41 6.51-6.82 3.98" />
+    </svg>
+  ),
+  Heart: (p) => (
+    <svg
+      {...p}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+    </svg>
+  ),
 };
 
 export default Icon;

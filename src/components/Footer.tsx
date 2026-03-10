@@ -18,7 +18,7 @@ export function Footer() {
           </span>
         </div>
 
-        <div className="flex gap-6">
+        <div className="flex items-center gap-6">
           {Links.map((link) => (
             <a
               key={link.href}
@@ -32,7 +32,7 @@ export function Footer() {
           ))}
         </div>
       </div>
-      <div className="text-center mt-10 flex gap-2 items-center justify-center">
+      <div className="text-center mt-10 flex gap-3 items-center justify-center flex-wrap">
         <span className="text-sm text-muted-foreground">
           Made with ❤️ by{" "}
           <a
@@ -51,9 +51,18 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Github className="inline-block w-4 h-4 mr-1" />
+            <Github className="inline-block w-4 h-4" />
           </a>
         </span>
+        <a
+          href="https://buymeacoffee.com/nobertdev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFDD00]/10 text-[#FFDD00] border border-[#FFDD00]/20 text-xs font-medium hover:bg-[#FFDD00]/20 transition-colors no-underline"
+        >
+          <Icon.Coffee className="w-3 h-3" />
+          Buy Me a Coffee
+        </a>
       </div>
       <div className="text-center text-muted-foreground text-xs mt-2">
         &copy; {new Date().getFullYear()} All rights reserved.

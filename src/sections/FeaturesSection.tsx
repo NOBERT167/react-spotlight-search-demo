@@ -15,9 +15,14 @@ const FEATURES: FeatureItem[] = [
     desc: "Cmd+K out of the box. Fully navigable with ↑↓ Enter Escape. Customizable shortcut string.",
   },
   {
+    icon: Icon.Zap,
+    title: "Action Shortcuts",
+    desc: "Each action's shortcut field registers a real global keybinding — fires onSelect even when the palette is closed.",
+  },
+  {
     icon: Icon.Search,
     title: "Fuzzy Search",
-    desc: "Smart ranking across label, description and keywords. Scores and sorts results by relevance.",
+    desc: "Smart weighted ranking across label, description and keywords. Scores and sorts results by relevance.",
   },
   {
     icon: Icon.Layers,
@@ -27,7 +32,7 @@ const FEATURES: FeatureItem[] = [
   {
     icon: Icon.Moon,
     title: "Auto Theme",
-    desc: "Watches your html class and system preference. Works with Tailwind, shadcn, and custom providers.",
+    desc: "Watches your html class and system preference. Works with Tailwind, shadcn, next-themes, and custom providers.",
   },
   {
     icon: Icon.Shield,
@@ -38,6 +43,11 @@ const FEATURES: FeatureItem[] = [
     icon: Icon.Package,
     title: "Zero Dependencies",
     desc: "React is the only peer dep. ~4kb gzipped. Ships both ESM and CJS builds with .d.ts types.",
+  },
+  {
+    icon: Icon.Star,
+    title: "Fully Typed",
+    desc: "Written in TypeScript with all types exported. Full IntelliSense and autocomplete support.",
   },
 ];
 

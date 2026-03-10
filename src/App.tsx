@@ -9,6 +9,7 @@ import { QuickStartSection } from "@/sections/QuickStartSection";
 import { ApiSection } from "@/sections/ApiSection";
 import { ThemingSection } from "@/sections/ThemingSection";
 import { ExamplesSection } from "@/sections/ExamplesSection";
+import { SupportSection } from "@/sections/SupportSection";
 import type { SectionId } from "@/data/content";
 import { useSpotlightContext } from "@nobertdev/react-spotlight-search";
 
@@ -29,9 +30,9 @@ export default function App() {
       <div className="min-h-screen bg-background text-foreground font-sans">
         {/* animated background  */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-1/2 -right-1/2 w-full h-full rounded-full blur-3xl opacity-20 bg-[#00d4ff]/30 animate-pulse"></div>
+          <div className="absolute -top-1/2 -right-1/2 w-full h-full rounded-full blur-3xl opacity-20 bg-[#00d4ff]/60 animate-pulse"></div>
           <div
-            className="absolute -bottom-1/2 -left-1/2 w-full h-full rounded-full blur-3xl opacity-20 bg-[#7c3aed]/30 animate-pulse"
+            className="absolute -bottom-1/2 -left-1/2 w-full h-full rounded-full blur-3xl opacity-20 bg-[#7c3aed]/60 animate-pulse"
             style={{ animationDelay: "1s" }}
           ></div>
         </div>
@@ -51,6 +52,7 @@ export default function App() {
           <ApiSection />
           <ThemingSection />
           <ExamplesSection />
+          <SupportSection />
         </div>
         <Footer />
       </div>

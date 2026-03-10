@@ -1,6 +1,12 @@
 import Icon from "@/components/icons";
 import type { SpotlightAction } from "@nobertdev/react-spotlight-search";
 import { SECTIONS } from "./content";
+import { Coffee } from "lucide-react";
+
+const BMC_URL = "https://buymeacoffee.com/nobertdev";
+const GITHUB_URL = "https://github.com/NOBERT167/react-spotlight-search";
+const NPM_URL =
+  "https://www.npmjs.com/package/@nobertdev/react-spotlight-search";
 
 export const DEMO_ACTIONS: SpotlightAction[] = [
   {
@@ -35,11 +41,7 @@ export const DEMO_ACTIONS: SpotlightAction[] = [
     icon: <Icon.Github className="w-[15px] h-[15px]" />,
     group: "Navigation",
     keywords: ["github", "source", "code", "repository"],
-    onSelect: () =>
-      window.open(
-        "https://github.com/NOBERT167/react-spotlight-search",
-        "_blank",
-      ),
+    onSelect: () => window.open(GITHUB_URL, "_blank"),
   },
   {
     id: "settings",
@@ -53,6 +55,18 @@ export const DEMO_ACTIONS: SpotlightAction[] = [
       window.location.href = "/settings";
     },
   },
+  {
+    id: "buy-me-coffee",
+    label: "Buy Me a Coffee",
+    description: "Support this project",
+    icon: <Coffee className="w-[15px] h-[15px]" />,
+    group: "Navigation",
+    keywords: ["support", "donate", "sponsor", "coffee", "tip"],
+    shortcut: "⌘B",
+    onSelect: () => {
+      window.open(BMC_URL, "_blank");
+    },
+  },
 
   //quick actions
   {
@@ -61,6 +75,7 @@ export const DEMO_ACTIONS: SpotlightAction[] = [
     description: "Switch between light and dark",
     icon: <Icon.Moon className="w-[15px] h-[15px]" />,
     group: "Quick Actions",
+    shortcut: "⌘D",
     keywords: ["dark", "light", "appearance"],
     onSelect: () => {},
   },
@@ -71,7 +86,6 @@ export const DEMO_ACTIONS: SpotlightAction[] = [
     icon: <Icon.Zap className="w-[15px] h-[15px]" />,
     group: "Quick Actions",
     keywords: ["publish", "release"],
-    shortcut: "⌘D",
     onSelect: () => {},
   },
   {
@@ -109,6 +123,26 @@ export const DEMO_ACTIONS: SpotlightAction[] = [
     group: "Developer",
     keywords: ["layers", "project", "manage"],
     onSelect: () => {},
+  },
+
+  // Support
+  {
+    id: "buy-me-coffee",
+    label: "Buy Me a Coffee",
+    description: "Support this project",
+    icon: <Icon.Coffee className="w-[15px] h-[15px]" />,
+    group: "Support",
+    keywords: ["support", "donate", "sponsor", "coffee", "tip"],
+    onSelect: () => window.open(BMC_URL, "_blank"),
+  },
+  {
+    id: "npm-package",
+    label: "View on npm",
+    description: "See the package on npm registry",
+    icon: <Icon.Package className="w-[15px] h-[15px]" />,
+    group: "Support",
+    keywords: ["npm", "registry", "package"],
+    onSelect: () => window.open(NPM_URL, "_blank"),
   },
 ];
 

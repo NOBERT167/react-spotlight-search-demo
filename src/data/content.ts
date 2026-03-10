@@ -7,6 +7,7 @@ export const SECTIONS = [
   "API",
   "Theming",
   "Examples",
+  "Support",
 ] as const;
 
 export type SectionId = (typeof SECTIONS)[number];
@@ -129,6 +130,12 @@ export const PROVIDER_PROPS: ApiRow[] = [
     default: "—",
     desc: "Callback fired when the spotlight closes",
   },
+  {
+    prop: "className",
+    type: "string",
+    default: "—",
+    desc: "Extra CSS class applied to the overlay element",
+  },
 ];
 
 export const ACTION_PROPS: ApiRow[] = [
@@ -166,7 +173,7 @@ export const ACTION_PROPS: ApiRow[] = [
     prop: "shortcut",
     type: "string",
     default: "—",
-    desc: "Display-only keyboard hint (e.g. ⌘K). Does not bind keys.",
+    desc: "Keyboard shortcut (e.g. ⌘S, mod+shift+f). Displayed as a badge and registered as a real global keybinding.",
   },
   {
     prop: "group",
@@ -201,5 +208,9 @@ export const Links = [
   {
     label: "Documentation",
     href: "https://github.com/NOBERT167/react-spotlight-search#readme",
+  },
+  {
+    label: "Buy Me a Coffee",
+    href: "https://buymeacoffee.com/nobertdev",
   },
 ];
